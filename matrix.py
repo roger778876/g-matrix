@@ -6,7 +6,7 @@ def print_matrix( matrix ):
   for xyz in range(0, 4):
     output += "|  "
     for point in matrix: # beautifies print output to have even columns
-      max_len = len(str(max(point)))
+      max_len = max([len(str(c)) for c in point]) # works for negative coords
       num = str(point[xyz])
       while (len(num) < max_len):
         num = " " + num

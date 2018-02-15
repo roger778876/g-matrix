@@ -14,8 +14,9 @@ def print_matrix( matrix ):
     output += "|\n"
   print output
 
-# creates identity matrix
+# changes matrix to identity matrix
 def ident( matrix ):
+'''
   i = 0
   for point in matrix:
     for xyz in range(0, 4):
@@ -24,6 +25,8 @@ def ident( matrix ):
       else:
         point[xyz] = 0
     i += 1
+'''
+  matrix = [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
 
 #m1 * m2 -> m2
 def matrix_mult( m1, m2 ):

@@ -8,7 +8,11 @@ matrix = new_matrix()
 
 print_matrix(matrix)
 ident(matrix)
+add_edge( matrix, 300, 40, 500, 6, 700, 80 )
 print_matrix(matrix)
+print matrix
+
+draw_lines(matrix, screen, color)
 
 
 # draw_lines( matrix, screen, color )

@@ -2,14 +2,30 @@ from display import *
 from matrix import *
 
 
+# reads point pairs from matrix and draws lines
+# ignores z axis for now
 def draw_lines( matrix, screen, color ):
-    pass
+  matrix_len = len(matrix)
+  point_pair = 0
+  while (point_pair < matrix_len):
+    x0 = matrix[point_pair][0]
+    y0 = matrix[point_pair][1]
+    x1 = matrix[point_pair + 1][0]
+    y1 = matrix[point_pair + 1][1]
+    draw_line(x0, y0, x1, y1, screen, color)
+    point_pair += 2
+    
 
 def add_edge( matrix, x0, y0, z0, x1, y1, z1 ):
-    pass
+  point1 = [x0, y0, z0, 1]
+  point2 = [x1, y1, z1, 1]
+  matrix.append(point1)
+  matrix.append(point2)
+  
 
 def add_point( matrix, x, y, z=0 ):
-    pass
+  point = [x, y, z, 1]
+  matrix.append(point)
 
 
 '''DRAW LINE FUNCTIONS'''

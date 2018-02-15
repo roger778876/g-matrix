@@ -4,12 +4,17 @@ import math
 def print_matrix( matrix ):
   output = ""
   for xyz in range(0, 4):
-    output += "| "
-    for point in matrix:
-      output += str(point[xyz]) + " "
+    output += "|  "
+    for point in matrix: # beautifies print output to have even columns
+      max_len = len(str(max(point)))
+      num = str(point[xyz])
+      while (len(num) < max_len):
+        num = " " + num
+      output += num + "  "
     output += "|\n"
   print output
 
+# creates identity matrix
 def ident( matrix ):
   i = 0
   for point in matrix:

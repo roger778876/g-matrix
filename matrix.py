@@ -29,7 +29,25 @@ def ident( matrix ):
 
 #m1 * m2 -> m2
 def matrix_mult( m1, m2 ):
-  pass
+  cols = len(m2)
+  rows = len(m2[0])
+  result = []
+  # populates new result matrix with same dimensions as m2
+  for point in range(cols):
+    result.append([])
+    for xyz in range(rows):
+      new_coord = 0
+      for i in range(rows):
+        new_coord += m1[i][xyz] * m2[point][i]
+      result[point].append(new_coord)
+
+  # copies result matrix to m2  
+  for point in range(cols):
+    for xyz in range(rows):
+      m2[point][xyz] = result[point][xyz]
+
+def del_matrix(matrix):
+  del matrix[:]
 
 
 def new_matrix(rows = 4, cols = 4):

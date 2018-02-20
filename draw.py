@@ -29,6 +29,7 @@ def add_point( matrix, x, y, z=0 ):
 
 
 '''DRAW LINE FUNCTIONS'''
+'''from g-line'''
 # returns the octant number
 def octant(x0, y0, x1, y1):
   try:
